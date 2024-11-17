@@ -3,7 +3,7 @@ import * as glob from "glob";
 import path, { resolve } from "node:path";
 import htmlPurge from 'vite-plugin-purgecss';
 import handlebars from 'vite-plugin-handlebars';
-//import {generarContextoDePagina} from './data/index';
+import {generarContextoDePagina} from './data/index';
 
 const getHtmlEntries = ()=>{
     return Object.fromEntries(
@@ -19,7 +19,7 @@ const getHtmlEntries = ()=>{
 export default defineConfig(
     {
         appType: 'mpa',
-        base: "/",
+        base: "/Ferrereria/",
         build: {
             rollupOptions: {
                 input: getHtmlEntries()
@@ -29,7 +29,7 @@ export default defineConfig(
             handlebars(
                 {
                     partialDirectory: resolve(__dirname, 'partials'),
-                    //context: generarContextoDePagina
+                    context: generarContextoDePagina
                 }
             ),
             htmlPurge({}),

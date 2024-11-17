@@ -7,26 +7,17 @@ import navData from "./global/nav";
 
 //import { getProductData } from "./productos/producto1";
 
-
-export const generarContextoDePagina = (page)=>{
-    console.log('page', page);
+export const generarContextoDePagina = (page) => {
     const contextObject = {
         ...navData,
     };
-    let pageObject = {}
-    switch(page){
-        /*case '/galler.html':
-            pageObject = getGalleryData();
-            break;*/
-        case '/index.html':
-            pageObject = getHeroData();
-            pageObject = {
-                ...pageObject,
-            }
-            break;
+    let pageObject = {}; // Declarar la variable antes de usarla
+    switch (page) {
+        default:
+            pageObject = {};
     }
     return {
         ...contextObject,
-        ...pageObject
-    }
-}
+        ...pageObject,
+    };
+};
