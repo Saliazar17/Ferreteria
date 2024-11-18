@@ -1,5 +1,5 @@
 //import { getGalleryData } from "./galeria/datosGaleria";
-//import { getHeroData } from "./hero/hero";
+import { getHeroData } from "./hero/hero";
 
 //----------------Nav
 import navData from "./global/nav";
@@ -13,6 +13,12 @@ export const generarContextoDePagina = (page) => {
     };
     let pageObject = {}; // Declarar la variable antes de usarla
     switch (page) {
+        case '/index.html':
+            pageObject = getHeroData();
+            pageObject = {
+                ...pageObject,
+            }
+            break;
         default:
             pageObject = {};
     }
