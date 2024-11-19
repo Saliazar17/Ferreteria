@@ -1,0 +1,95 @@
+@border-radius: 12px;
+@card-radius: 15px;
+@max-width: 1200px;
+@box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+@transition: 0.3s;
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: @fith-text-color;
+  background-color: @primary-background-color;
+}
+
+h1 {
+  text-align: center;
+  color: @primary-text-color;
+  font-size: 3em;
+  margin: 20px 0;
+}
+
+h2 {
+  color: @primary-text-color;
+  font-size: 2em;
+  margin-bottom: 10px;
+  position: relative;
+
+  &:after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: @third-background-color;
+    margin-top: 5px;
+    border-radius: 2px;
+  }
+}
+
+.nosotros {
+  max-width: @max-width;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background: @primary-background-color;
+
+  .organizacion,
+  .historia,
+  .equipo {
+    margin-bottom: 30px;
+    background: @secondary-background-color;
+    border-radius: @card-radius;
+    padding: 20px;
+    color: @secondary-text-color;
+    box-shadow: @box-shadow;
+    transition: @transition;
+
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    h2 {
+      color: @secondary-text-color;
+    }
+
+    p {
+      margin-bottom: 15px;
+      font-size: 1.1em;
+      color: @secondary-text-color;
+    }
+
+    .imagenes {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      margin-top: 15px;
+      flex-wrap: wrap;
+
+      img {
+        width: 45%;
+        border-radius: @border-radius;
+        box-shadow: @box-shadow;
+        transition: @transition;
+
+        &:hover {
+          transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+          width: 90%;
+        }
+      }
+    }
+  }
+}
