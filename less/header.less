@@ -1,7 +1,7 @@
 header {
     background-color: @secondary-background-color;
     color: @secondary-text-color;
-    box-shadow: 0x 3px 5px @primary-background-color-dark;
+    box-shadow: 0px 3px 5px @primary-background-color-dark;
 
     .container {
         display: flex;
@@ -46,17 +46,47 @@ header {
                     }
                 }
             }
+
+            // Estilos para el botón de hamburguesa
             .hamburger {
-                display: none;
-                @media (min-width: @breakResolutions[tablet] ) {
-                    display: none;
+                display: block;
+                cursor: pointer;
+                padding: 0.5rem;
+                background: transparent;
+                border: none;
+
+                span {
+                    display: block;
+                    width: 25px;
+                    height: 3px;
+                    background-color: @secondary-text-color;
+                    margin: 5px 0;
+                    transition: transform 0.3s ease;
+                }
+
+                @media (min-width: @breakResolutions[tablet]) {
+                    display: none;  // Se oculta en pantallas grandes
+                }
+            }
+
+            .nav-links {
+                display: flex;
+                list-style: none;
+
+                &.active {
+                    display: flex;  // El menú aparece cuando se agrega la clase active
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    background-color: @secondary-background-color;
+                    width: 100%;
+                    flex-direction: column;
+                    padding: 1rem;
                 }
             }
         }
-        @media (min-width: @breakResolutions[tablet] ) {
-            justify-content: space-between;
-            padding: 0 2rem;
-        }
-    }
 
+        
+    }
 }
+
