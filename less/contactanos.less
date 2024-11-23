@@ -1,93 +1,107 @@
 .contactanos {
     padding: @default-padding;
     background-color: @primary-background-color;
-    color: @third-text-color;
-    text-align: center;
-
-    h2 {
-        font-size: 2.5rem;
-        color: @primary-text-color;
-        margin-bottom: @default-margin;
+  
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: @default-gap;
+      justify-content: space-between;
     }
-
-    p {
-        font-size: 1.1rem;
-        margin-bottom: @default-margin;
+  
+    .formulario {
+      flex: 1 1 50%;
+      padding: @default-padding;
+  
+      h3 {
+        font-size: 1.8rem;
         color: @third-text-color;
-    }
-
-    .contact-info {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        margin-bottom: @default-margin;
-
-        .info-item {
-            max-width: 300px;
-            padding: @default-padding;
-            background-color: @secondary-background-color;
-            color: @secondary-text-color;
-            border-radius: 5px;
-            box-shadow: 2px 2px 5px @secondary-background-color-dark;
-
-            h3 {
-                font-size: 1.3rem;
-                margin-bottom: 0.5rem;
-            }
-
-            p {
-                font-size: 1rem;
-            }
-        }
-    }
-
-    .formulario-contacto {
-        max-width: 600px;
-        margin: 0 auto;
-        padding: @default-padding;
-        border: 1px solid @fourth-background-color;
-        border-radius: 5px;
-        background-color: @secondary-background-color;
-        box-shadow: 2px 2px 5px @secondary-background-color-dark;
-
+        margin-bottom: @default-gap;
+      }
+  
+      form {
         .form-group {
-            margin-bottom: @default-gap;
-            text-align: left;
-
-            label {
-                display: block;
-                font-size: 1rem;
-                margin-bottom: 0.5rem;
-                color: @fourth-text-color;
-            }
-
-            input,
-            textarea {
-                width: 100%;
-                padding: 0.8rem;
-                font-size: 1rem;
-                border: 1px solid @third-background-color;
-                border-radius: 5px;
-            }
+          margin-bottom: @default-margin;
+  
+          label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: @fourth-text-color;
+          }
+  
+          input,
+          textarea {
+            width: 100%;
+            padding: 0.8rem;
+            font-size: 1rem;
+            border: 1px solid @primary-text-color;
+            border-radius: 5px;
+          }
         }
-
+  
         .btn-enviar {
-            text-decoration: none;
-            padding: 0.8rem 1rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: @third-background-color;
-            color: @secondary-text-color;
-            box-shadow: 1px 1px 3px darken(@third-background-color, 20%);
-            border: none;
-            cursor: pointer;
-            transition: background-color 0.3s;
-
-            &:hover {
-                background-color: darken(@third-background-color, 10%);
-            }
+          background-color: @third-background-color;
+          color: @secondary-text-color;
+          border: none;
+          padding: 0.8rem 1.5rem;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: background-color 0.3s;
+  
+          &:hover {
+            background-color: darken(@third-background-color, 10%);
+          }
         }
+      }
     }
-}
-
+  
+    .info-contacto {
+      flex: 1 1 40%;
+      padding: @default-padding;
+      color: @third-text-color;
+  
+      h3 {
+        font-size: 1.8rem;
+        margin-bottom: @default-gap;
+        color: @primary-text-color;
+      }
+  
+      p {
+        font-size: 1rem;
+        margin-bottom: @default-gap;
+      }
+  
+      .info-lista {
+        list-style: none;
+        padding: 0;
+  
+        li {
+          margin-bottom: 0.5rem;
+          font-size: 1rem;
+  
+          strong {
+            color: @third-text-color;
+          }
+        }
+      }
+  
+      .redes-sociales {
+        margin-top: @default-margin;
+  
+        p {
+          font-size: 1rem;
+          margin-bottom: 0.5rem;
+        }
+  
+        .icons a {
+          margin-right: 0.5rem;
+  
+          img {
+            width: 24px;
+            height: 24px;
+          }
+        }
+      }
+    }
+  }
+  

@@ -1,12 +1,8 @@
-//import { getGalleryData } from "./galeria/datosGaleria";
+// Importar las dependencias necesarias
 import { getHeroData } from "./hero/hero";
-
-//----------------Nav
 import navData from "./global/nav";
-//--------------- Productos 
 
-//import { getProductData } from "./productos/producto1";
-
+// Función para generar el contexto de la página
 export const generarContextoDePagina = (page) => {
     const contextObject = {
         ...navData,
@@ -17,7 +13,7 @@ export const generarContextoDePagina = (page) => {
             pageObject = getHeroData();
             pageObject = {
                 ...pageObject,
-            }
+            };
             break;
         default:
             pageObject = {};
@@ -27,3 +23,4 @@ export const generarContextoDePagina = (page) => {
         ...pageObject,
     };
 };
+

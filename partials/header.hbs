@@ -5,12 +5,12 @@
             <h1>Ferreteria Mafermas</h1>
         </section>
         <nav>
-            <ul>
+            <ul class="nav-links">
                 {{#each nav}}
                     <li><a href="%BASE_URL%{{uri}}">{{label}}</a></li>
                 {{/each}}
             </ul>
-            <button class="hamburger">
+            <button class="hamburger" aria-label="Abrir menú">
                 <span></span>
                 <span></span>
                 <span></span>
