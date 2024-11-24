@@ -1,4 +1,4 @@
-#contribuir {
+#contribuir { 
     margin: 2rem;
     padding: 2rem;
     background-color: #f9f9f9;
@@ -26,6 +26,24 @@
             border: 1px solid #ddd;
             border-radius: 5px;
             text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+          
+            .opcion-imagen {
+                width: 100%;
+                height: 180px; 
+                margin-bottom: 1rem;
+                overflow: hidden;
+                border-radius: 5px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover; 
+                }
+            }
 
             h3 {
                 font-size: 1.5rem;
@@ -38,6 +56,8 @@
             }
 
             button {
+                width: 100%;
+                max-width: 200px;
                 padding: 0.5rem 1rem;
                 background-color: #007bff;
                 color: #ffffff;

@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -7,33 +7,8 @@
     <link rel="stylesheet" href="less/main.less" type="text/css">
 </head>
 <body>
-    {{>header}}
-    <main>
-        <section id="contribuir">
-            <h2>¿Cómo puedes contribuir?</h2>
-            <p>Existen varias formas en las que puedes apoyar nuestra causa y marcar la diferencia:</p>
-            
-            <div class="contribuir-opciones">
-                <div class="opcion">
-                    <h3>Donaciones</h3>
-                    <p>Tu apoyo económico es vital para mantener nuestras operaciones y ayudar a quienes más lo necesitan. Puedes realizar una donación fácilmente a través de nuestra plataforma segura.</p>
-                    <button onclick="window.location.href='./donaciones.html'">Donar ahora</button> 
-                </div>
-                
-                <div class="opcion">
-                    <h3>Voluntariado</h3>
-                    <p>Únete como voluntario y ayúdanos en nuestros proyectos. Ya sea con tu tiempo, habilidades o conocimientos, siempre hay un lugar para ti en nuestro equipo.</p>
-                    <button onclick="window.location.href='/voluntariado'">Únete como voluntario</button>
-                </div>
-                
-                <div class="opcion">
-                    <h3>Participación en eventos</h3>
-                    <p>Asiste a nuestros eventos y actividades para conocer más sobre nuestra causa y conectar con otros que comparten la misma visión.</p>
-                    <button onclick="window.location.href='./eventos.html'">Ver próximos eventos</button>
-                </div>
-            </div>
-        </section>
-    </main>
-    {{>footer}}
+    {{> header}}
+    {{> ayuda}}
+    {{> footer}}
 </body>
 </html>
