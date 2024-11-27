@@ -1,0 +1,77 @@
+.calendario-eventos {
+  max-width: @max-width;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+  background: lighten(@primary-background-color, 5%);
+
+  h1 {
+    color: @primary-text-color;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+
+  .grid-calendario {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+    gap: 20px;
+    justify-items: center;
+  }
+
+  .evento-card {
+    background: @secondary-background-color;
+    border-radius: 25px; 
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); 
+    text-align: center;
+    position: relative;
+    transition: all 0.3s ease;
+    width: 90%; 
+    height: 220px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 15px 25px rgba(0, 0, 0, 0.25); 
+    }
+
+    h2 {
+      color: @six-text-color;
+      font-size: 1.5em;
+      margin-bottom: 5px;
+      text-transform: uppercase;
+    }
+
+    h3 {
+      color: @secondary-text-color;
+      font-size: 1.2em;
+      margin-bottom: 10px;
+    }
+  }
+
+  
+  .evento-card::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 40px;
+    height: 40px;
+    background: @primary-text-color; 
+    border-radius: 50%;
+  }
+
+  .evento-card::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    width: 40px;
+    height: 40px;
+    background: @primary-text-color;
+    border-radius: 50%;
+  }
+}
