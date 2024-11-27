@@ -1,0 +1,55 @@
+.cards-container {
+    background-color: lighten(@primary-background-color, 40%);
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    padding: 2rem 1rem; 
+    gap: 1.5rem; 
+    margin: 2rem 0; 
+    .card {
+        position: relative;
+        width: 280px; 
+        background-color: @primary-background-color;
+        box-shadow: 3px 3px 7px @secondary-background-color-dark;
+        border-radius: 8px ;
+        margin: 0.5rem;
+        h3 {
+            margin: 0;
+            padding: 0.5rem;
+            font-size: 1.5rem;
+            color: @secondary-text-color;
+            background-color: @fourth-background-color;
+            text-align: center;
+            border-bottom: 1px solid @fourth-background-color;
+        }
+        img {
+            display: block; 
+            width: 100%; 
+            height: 160px; 
+            object-fit: contain; 
+            object-position: center; 
+            border-radius: 8px 8px 0 0; 
+        }
+        p {
+            padding: 0.5rem;
+            line-height: 1.5;
+            font-size: 0.9rem;
+            text-align: justify;
+            color: @fith-text-color;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin: 0;
+            text-align: center; 
+            li {
+                padding: 0.5rem ;
+                font-size: 0.9rem; 
+                color: @fith-text-color;
+                line-height: 1.4; 
+                text-align: center; 
+            }
+        }
+    }
+}
