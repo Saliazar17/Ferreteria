@@ -27,6 +27,8 @@ header {
         }
 
         nav {
+            position: relative;
+
             ul {
                 list-style: none;
                 display: flex;
@@ -65,28 +67,39 @@ header {
                 }
 
                 @media (min-width: @breakResolutions[tablet]) {
-                    display: none;  // Se oculta en pantallas grandes
+                    display: none; // Se oculta en pantallas grandes
                 }
             }
 
             .nav-links {
-                display: flex;
+                display: none; // Oculto por defecto
                 list-style: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background-color: @secondary-background-color;
+                width: 100%;
+                flex-direction: column;
+                padding: 1rem;
 
                 &.active {
-                    display: flex;  // El menú aparece cuando se agrega la clase active
-                    position: absolute;
-                    top: 100%;
-                    left: 0;
-                    background-color: @secondary-background-color;
-                    width: 100%;
-                    flex-direction: column;
-                    padding: 1rem;
+                    display: flex; // Mostrar menú al activar la clase
+                }
+
+                li {
+                    text-align: center; // Centra los elementos en el menú colapsado
+                }
+            }
+
+            @media (min-width: @breakResolutions[tablet]) {
+                .nav-links {
+                    display: flex;
+                    position: static; // Alinea horizontalmente en pantallas grandes
+                    flex-direction: row;
+                    width: auto;
+                    padding: 0;
                 }
             }
         }
-
-        
     }
 }
-

@@ -1,107 +1,88 @@
 .contactanos {
-    padding: @default-padding;
-    background-color: @primary-background-color;
-  
-    .container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: @default-gap;
-      justify-content: space-between;
-    }
-  
-    .formulario {
-      flex: 1 1 50%;
-      padding: @default-padding;
-  
-      h3 {
-        font-size: 1.8rem;
-        color: @third-text-color;
-        margin-bottom: @default-gap;
-      }
-  
-      form {
-        .form-group {
-          margin-bottom: @default-margin;
-  
-          label {
-            display: block;
-            margin-bottom: 0.5rem;
-            color: @fourth-text-color;
-          }
-  
-          input,
-          textarea {
-            width: 100%;
-            padding: 0.8rem;
-            font-size: 1rem;
-            border: 1px solid @primary-text-color;
-            border-radius: 5px;
-          }
-        }
-  
-        .btn-enviar {
-          background-color: @third-background-color;
-          color: @secondary-text-color;
-          border: none;
-          padding: 0.8rem 1.5rem;
-          border-radius: 5px;
-          cursor: pointer;
-          transition: background-color 0.3s;
-  
-          &:hover {
-            background-color: darken(@third-background-color, 10%);
-          }
-        }
-      }
-    }
-  
-    .info-contacto {
-      flex: 1 1 40%;
-      padding: @default-padding;
+  padding: @default-padding;
+  background-color: @primary-background-color;
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: @default-gap;
+    justify-content: space-between;
+  }
+  .formulario {
+    flex: 1 1 50%;
+    h3 {
+      font-size: 1.8rem;
       color: @third-text-color;
-  
-      h3 {
-        font-size: 1.8rem;
-        margin-bottom: @default-gap;
-        color: @primary-text-color;
-      }
-  
-      p {
-        font-size: 1rem;
-        margin-bottom: @default-gap;
-      }
-  
-      .info-lista {
-        list-style: none;
-        padding: 0;
-  
-        li {
+      margin-bottom: @default-gap;
+    }
+    form {
+      .form-group {
+        margin-bottom: @default-margin;
+        label {
+          display: block;
           margin-bottom: 0.5rem;
+          color: @fourth-text-color;
+        }
+        input,
+        textarea {
+          width: 100%;
+          padding: 0.8rem;
           font-size: 1rem;
-  
-          strong {
-            color: @third-text-color;
-          }
+          border: 1px solid @primary-text-color;
+          border-radius: 5px;
         }
       }
-  
-      .redes-sociales {
-        margin-top: @default-margin;
-  
-        p {
-          font-size: 1rem;
-          margin-bottom: 0.5rem;
-        }
-  
-        .icons a {
-          margin-right: 0.5rem;
-  
-          img {
-            width: 24px;
-            height: 24px;
-          }
+      .btn-enviar {
+        background-color: @third-background-color;
+        color: @secondary-text-color;
+        border: none;
+        padding: 0.8rem 1.5rem;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        &:hover {
+          background-color: darken(@third-background-color, 10%);
         }
       }
     }
   }
-  
+  .info-contacto {
+    flex: 1;
+    color: @third-text-color;
+    h3 {
+      font-size: 1.8rem;
+      margin-bottom: @default-gap;
+      color: @primary-text-color;
+    }
+    p {
+      font-size: 1rem;
+      margin-bottom: @default-gap;
+    }
+    .info-lista {
+      list-style: none;
+      padding: 0;
+      li {
+        margin-bottom: 0.5rem;
+        font-size: 1rem;
+        strong {
+          color: @third-text-color;
+        }
+      }
+    }
+    .redes-sociales {
+      margin-top: @default-margin;
+      p {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .icons a {
+        margin-right: 0.5rem;
+
+        img {
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+  }
+}
