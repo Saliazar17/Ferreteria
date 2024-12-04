@@ -19,7 +19,7 @@ const getHtmlEntries = ()=>{
 export default defineConfig(
     {
         appType: 'mpa',
-        base: "/Ferrereria/",
+        base: "./",
         build: {
             rollupOptions: {
                 input: getHtmlEntries()
